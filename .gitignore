@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+*.egg-info/
+dist/
+.pytest_cache/
+
+# Environment — never commit secrets
+.env
+.env.local
+.env.production
+
+# Model weights — too large, use HuggingFace Hub
+*.bin
+*.safetensors
+*.gguf
+finetune/checkpoints/
+finetune/models/
+
+# Training data
+finetune/data/*.jsonl
+finetune/data/*.csv
+
+# Frontend
+frontend/node_modules/
+frontend/.next/
+
+# MLflow
+mlruns/
+mlartifacts/
+mlflow.db
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
