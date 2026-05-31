@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+:root {
+  --ibm-blue: #0f62fe;
+  --ibm-blue-dark: #0043ce;
+  --ibm-blue-light: #d0e2ff;
+  --ibm-gray-100: #f4f4f4;
+  --ibm-gray-200: #e0e0e0;
+  --ibm-gray-600: #525252;
+  --ibm-gray-900: #161616;
+  --ibm-green: #24a148;
+  --ibm-red: #da1e28;
+  --ibm-yellow: #f1c21b;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--ibm-gray-100);
+  color: var(--ibm-gray-900);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-fade-in { animation: fadeIn 0.4s ease forwards; }
+.animate-pulse { animation: pulse 1.5s ease infinite; }
+
+.ibm-blue { color: var(--ibm-blue); }
+.ibm-blue-bg { background: var(--ibm-blue); }
